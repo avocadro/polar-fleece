@@ -18,14 +18,14 @@ CREATE OR REPLACE SECRET POLAR_FLEECE_APAC_PRD.FINANCE_ODS.alphavantage_api_key
   TYPE = GENERIC_STRING
   SECRET_STRING = 'placeholder'; -- DO NOT STORE SECRETS IN PLAINTEXT
 
--- Create an external access integration
-CREATE OR REPLACE EXTERNAL ACCESS INTEGRATION POLAR_FLEECE_APAC_PRD.FINANCE_ODS.alphavantage_access_integration
-  ALLOWED_NETWORK_RULES = (alphavantage_api_rule)
-  ALLOWED_AUTHENTICATION_SECRETS = (alphavantage_api_key)
-  ENABLED = true;
+-- Create an external access integration (cut because it is unavailable for free-tier)
+-- CREATE OR REPLACE EXTERNAL ACCESS INTEGRATION POLAR_FLEECE_APAC_PRD.FINANCE_ODS.alphavantage_access_integration
+--   ALLOWED_NETWORK_RULES = (alphavantage_api_rule)
+--   ALLOWED_AUTHENTICATION_SECRETS = (alphavantage_api_key)
+--   ENABLED = true;
 
 -- Create the function for querying the Alpha Vantage API
-CREATE OR REPLACE FUNCTION get_daily_adjusted_time_series(symbol VARCHAR) 
+CREATE OR REPLACE FUNCTION POLAR_FLEECE_APAC_PRD.FINANCE_ODS.get_daily_adjusted_time_series(symbol VARCHAR) 
 RETURNS TABLE (
     timestamp STRING, 
     open FLOAT, 
@@ -39,12 +39,13 @@ RETURNS TABLE (
 LANGUAGE PYTHON
 RUNTIME_VERSION = 3.8
 HANDLER = 'ApiData'
-EXTERNAL_ACCESS_INTEGRATIONS = (alphavantage_access_integration)
-SECRETS = ('api_key' = alphavantage_api_key)
+--EXTERNAL_ACCESS_INTEGRATIONS = (alphavantage_access_integration)
+SECRETS = ('api_key' = POLAR_FLEECE_APAC_PRD.FINANCE_ODS.alphavantage_api_key)
 PACKAGES = ('requests')
 AS
 $$
 import requests
+import _snowflake
 
 class ApiData:
     def process(self, symbol):

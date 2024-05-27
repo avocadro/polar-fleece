@@ -3,6 +3,7 @@
 -- Create a domain owner role, which is restricted to ownership privileges of finance domain objects
 create role if not exists ROLE_FINANCE_OWNER_PRD;
 grant usage on database polar_fleece_apac_prd to role ROLE_FINANCE_OWNER_PRD;
+grant usage on warehouse compute_wh to role ROLE_FINANCE_OWNER_PRD;
 
 -- Create split Finance schema, to separate the data from the logic as per the data mesh philosophy
 create schema polar_fleece_apac_prd.finance_ods 
@@ -18,4 +19,5 @@ grant ownership on schema polar_fleece_apac_prd.finance_analytics to role role_f
 
 -- Create a user and grant them finance domain ownership
 create user user_jordan_prd;
+alter user user_jordan_prd set default_warehouse = compute_wh;
 grant role role_finance_owner_prd to user user_jordan_prd;
