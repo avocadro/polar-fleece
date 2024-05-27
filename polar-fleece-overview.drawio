@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2024-05-27T08:13:56.969Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="O28LBYGjqImSe4Hm_wKD" version="24.4.8" type="device">
+  <diagram name="Page-1" id="4tBYLdhv-vicbUA5E4DH">
+    <mxGraphModel dx="2280" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-23" value="Analytics" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="140" y="390" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-22" value="ODS" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="140" y="250" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-2" target="XUIMlj9UUi3Sf196oEfo-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-2" value="some remote data source&lt;div&gt;- interesting&lt;/div&gt;&lt;div&gt;- finance&lt;/div&gt;&lt;div&gt;- can be used for performance&lt;/div&gt;&lt;div&gt;- time series&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="140" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-3" target="XUIMlj9UUi3Sf196oEfo-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-3" value="ingestor microservice" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-4" target="XUIMlj9UUi3Sf196oEfo-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-4" value="Parquet file in Azure blob storage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-5" target="XUIMlj9UUi3Sf196oEfo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-5" value="Snowflake external table?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-6" target="XUIMlj9UUi3Sf196oEfo-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-6" value="Snowflake views for analysts" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="420" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-8" target="XUIMlj9UUi3Sf196oEfo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-8" value="Python code incl. streamlit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="420" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-9" value="Streamlit app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="420" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-18" target="XUIMlj9UUi3Sf196oEfo-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-18" value="GitHub action: build Docker image" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="420" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-19" target="XUIMlj9UUi3Sf196oEfo-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-19" target="XUIMlj9UUi3Sf196oEfo-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-19" value="GitHub action: deploy image to Azure Kubernetes Service" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="XUIMlj9UUi3Sf196oEfo-26" target="XUIMlj9UUi3Sf196oEfo-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-26" value="daily trigger" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="140" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XUIMlj9UUi3Sf196oEfo-29" value="Python ETL code" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
