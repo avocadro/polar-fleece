@@ -1,0 +1,23 @@
+# Use the official Python image from the Docker Hub
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the current directory contents into the container
+COPY . /app
+
+# Install the dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Set environment variables
+ENV SNOWFLAKE_USER your_snowflake_user
+ENV SNOWFLAKE_PASSWORD your_snowflake_password
+ENV SNOWFLAKE_ACCOUNT your_snowflake_account
+ENV SNOWFLAKE_WAREHOUSE your_snowflake_warehouse
+ENV SNOWFLAKE_DATABASE your_snowflake_database
+ENV SNOWFLAKE_SCHEMA your_snowflake_schema
+ENV SNOWFLAKE_TABLE your_snowflake_table
+
+# Run the application
+CMD ["python", "app.py"]
