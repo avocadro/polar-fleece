@@ -4,6 +4,8 @@
 -- Adapted from https://medium.com/snowflake/pulling-data-from-an-external-api-into-snowflake-with-python-dcc1ba6ecc69
 -- Refined with the assistance of ChatGPT.
 
+-- NOT CURRENTLY WORKING! Requires non trial account for Snowflake to connect to external API. Disappointing. Have to build an ETL app to do this instead.
+
 -- Session context:
 USE ROLE ROLE_FINANCE_OWNER_PRD;
 

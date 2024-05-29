@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: alpha-vantage-etl-app
-  labels:
-    app: alpha-vantage-etl-app
+  name: alpha-vantage-viz-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: alpha-vantage-etl-app
+      app: alpha-vantage-viz-app
   template:
     metadata:
       labels:
-        app: alpha-vantage-etl-app
+        app: alpha-vantage-viz-app
     spec:
       containers:
-      - name: alpha-vantage-etl-app
+      - name: alpha-vantage-viz-app
         image: your-image-name
         ports:
         - containerPort: 5000
